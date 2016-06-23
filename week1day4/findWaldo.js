@@ -22,12 +22,11 @@
 // The second argument/parameter is expected to be a function
 
 function findWaldo(arr, found) {
-  console.log(arr);
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] == "Waldo") {
-      found(i);
+  arr.forEach(function(name, index) {
+     if (name == "Waldo") {
+      found(index);
     }
-  }
+  })
 }
 
 function actionWhenFound(index) {
